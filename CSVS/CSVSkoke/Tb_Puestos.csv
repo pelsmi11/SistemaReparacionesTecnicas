@@ -1,0 +1,20 @@
+Puesto_Id;Puesto_Nombre
+1;Director General
+2;Directivo
+3;Director de Recursos Humanos
+4;Gerente
+5;Auxiliar
+6;Director De Finanzas
+7;Recepcionista
+8;Director de Riesgos
+9;Director de Sistemas de Informacion
+11;Jefe de Marca
+12;Jefe de Operaciones
+13;Director Tecnico
+14;Director Ejecutivo
+16;Director Comercial
+17;DBA
+18;Administrador
+19;Autorizador
+20;Tecnico
+21;Desarrollador

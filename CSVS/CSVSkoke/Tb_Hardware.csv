@@ -1,0 +1,26 @@
+Id_Hardware;Id_TipoHardware_FK;Id_Marca_FK;Hardware_Nombre;Hardware_CantNucleo;Hardware_GHZ;Hardware_MemoriaCache;Hardware_Almacenamiento;Hardware_Frecuencia;Hardware_VelocidadLectura;Hardware_VelocidadEscritura
+1;1;7;I7 7700;4;4.2;8;;;;
+2;1;6;RYZEN 1800 X;8;4;16;;;;
+3;1;7;I7 6700;4;4;8;;;;
+4;1;6;RYZEN 1700;8;3.7;16;;;;
+5;1;7;I5 8600K;6;4.3;9;;;;
+6;2;8;RIPJAWS;;;;8;3000 MHZ;;
+7;2;9;FURY;;;;8;2666 MHZ;;
+8;3;4;PRIME X370-A;;;;;;;
+9;3;4;PRIME X370-PRO;;;;;;;
+10;3;10;Z370 PRO4;;;;;;;
+11;3;11;Z370 PC PRO;;;;;;;
+12;4;12;CAVIAR BLUE;;;;1000 GB;;150 MB/S;126 MB/S
+13;4;13;BARRACUDA;;;;1000 GB;;150 MB/S;126 MB/S
+14;5;14;MDOSXX;;;;;;;
+15;5;15;TL-WN881ND;;;;;;;
+16;6;16;61110 8.8NEG;;;;;;;
+17;7;3;SE2216HV;;;;;;;
+18;7;1;22CWA;;;;;;;
+19;7;5;PA3769U;;;;;;;
+20;7;4;VS228T-P;;;;;;;
+21;7;2;S22E200B;;;;;;;
+22;8;17;G443;;;;;;;
+23;9;17;G213;;;;;;;
+24;10;18;WORKFORCE;;;;;;;
+25;11;6;RX 480;2304;;;8 GB;;;

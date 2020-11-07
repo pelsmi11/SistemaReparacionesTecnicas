@@ -1,0 +1,63 @@
+--TABLAS A UTILIZAR										|
+--*SALES ORDER HEADER									|
+--*SALES ORDER DETAIL -> SALES ORDER HEADER				|
+--*PERSON PERSON -> CUSTOMER -> SALES ORDER HEADER		|
+--*PERSON ADDRESS -> SALES ORDER HEADER					|
+--*PRODUCTO -> SALES ORDER DETAIL						|
+--*SPECIAL OFERT -> SALES ORDER DETAIL					|
+--------------------------------------------------------+
+
+--31,465
+--121
+
+SELECT
+	SOH.SalesOrderID,
+	SOH.OrderDate,
+	UPPER(P.FirstName+' '+P.LastName),
+	A.AddressLine1+';'+A2.AddressLine2,
+	PR.Name,
+	PR.Color,
+	--CASE
+	--WHEN ISNUMERIC(PR.Size) = 1 THEN 
+	--CASE 
+	--WHEN PR.Size >= 30 AND PR.Size <= 50 THEN 'S'
+	--WHEN PR.Size >= 51 AND PR.Size <= 55 THEN 'M'
+	--WHEN PR.Size >= 56 AND PR.Size <= 60 THEN 'L'
+	--WHEN PR.Size > 60 THEN 'XL'
+	--WHEN ISNULL(PR.Size,'') = '' THEN 'SIN IFORMACION'
+	--ELSE PR.Size END ,
+	SO.Description,
+	DATEPART(YEAR,SO.StartDate),
+	DATEPART(YEAR,SO.EndDate),
+	DATEDIFF(MONTH,StartDate,EndDate)
+FROM
+	Person.Person				AS P
+INNER JOIN	
+	Sales.Customer				AS C
+ON
+	P.BusinessEntityID = C.PersonID
+INNER JOIN
+	Sales.SalesOrderHeader		AS SOH
+ON
+	C.CustomerID = SOH.CustomerID
+INNER JOIN
+	Person.Address				AS A
+ON
+	SOH.ShipToAddressID = A.AddressID
+INNER JOIN
+	Person.Address				AS A2
+ON
+	SOH.BillToAddressID = A2.AddressID
+INNER JOIN
+	Sales.SalesOrderDetail		AS SOD
+ON
+	SOH.SalesOrderID = SOD.SalesOrderID
+INNER JOIN
+	Production.Product			AS PR
+ON
+	SOD.ProductID	=PR.ProductID
+INNER JOIN
+	Sales.SpecialOffer			AS SO
+ON 
+	SOD.SpecialOfferID = SO.SpecialOfferID
+GO
